@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="menu.html" class="menu-link">← Menu</a>
+  <div class="music-player-card desktop-enhanced">
+    <div class="album-art-container">
+      <img src="assets/images/Saiyaara-1.jpg" alt="Album Art" class="album-art" />
+    </div>
+    <div class="player-main">
+      <div class="song-info">
+        <h2 id="song-title">Saiyaara</h2>
+        <p id="song-artist">Bollywood</p>
+      </div>
+      <audio id="audio-player" src="assets/songs/Title Track Saiyaara 320 Kbps.mp3"></audio>
+      <div class="controls">
+        <button id="prev-btn" aria-label="Previous">⏮️</button>
+        <button id="play-pause-btn" aria-label="Play/Pause">▶️</button>
+        <button id="next-btn" aria-label="Next">⏭️</button>
+        <button id="loop-btn" aria-label="Loop">🔁</button>
+        <button id="shuffle-btn" aria-label="Shuffle">🔀</button>
+      </div>
+      <div class="sliders">
+        <input type="range" id="seek-slider" min="0" max="100" value="0">
+        <div class="time-display">
+          <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+        <div class="volume-container">
+          <button id="mute-btn" aria-label="Mute">🔊</button>
+          <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+      <div class="playlist-menu">
+        <button class="playlist-tab active" data-category="bollywood">Bollywood</button>
+        <button class="playlist-tab" data-category="pakistani">Pakistani</button>
+      </div>
+      <div class="playlist" id="playlist">
+        <!-- Bollywood songs -->
+        <div class="playlist-category" data-category="bollywood">
+          <div class="playlist-item active" data-src="assets/songs/Title Track Saiyaara 320 Kbps.mp3" data-title="Saiyaara" data-artist="Bollywood" data-art="assets/images/Saiyaara-1.jpg">
+            <span>Saiyaara</span>
+          </div>
+          <div class="playlist-item active" data-src="assets/songs/Asan Nahi Yahan.mp3" data-title="Asan Nahi Yahan" data-artist="Bollywood" data-art="assets/images/ashqui2.jpeg">
+            <span>Asaan Nahi Yahan</span>
+          </div>
+          <div class="playlist-item active" data-src="assets/songs/Piya Aye Na.mp3" data-title="Piya Aye Na" data-artist="Bollywood" data-art="assets/images/ashqui2.jpeg">
+            <span>Piya Aye Na</span>
+          </div>
+          <div class="playlist-item" data-src="assets/songs/Humsafar Saiyaara 320 kbps.mp3" data-title="Humsafar Saiyaara" data-artist="Irshad Kamil, Sachet–Parampara, Parampara Thakur, Sachet Tandon" data-art="assets/images/humsafar.jpg">
+            <span>Humsafar Saiyaara</span>
+          </div>
+        </div>
+        <!-- Pakistani songs -->
+        <div class="playlist-category" data-category="pakistani" style="display:none;">
+          <div class="playlist-item" data-src="assets/songs/09 - Mann Mayal - OST - HumTV (ApniISP.Com).mp3" data-title="Mann Mayal" data-artist="Pakistani" data-art="assets/images/man mayal.jpeg">
+            <span>Mann Mayal</span>
+          </div>
+          <div class="playlist-item" data-src="assets/songs/Meem Se Mohabbat OST Mp3 Download - Asim Azhar.mp3" data-title="Meem Se Mohabbat" data-artist="Pakistani" data-art="assets/images/meem se.jpg">
+            <span>Meem Se Mohabbat</span>
+          </div>
+          <div class="playlist-item" data-src="assets/songs/61 - Dobara - OST - HUM TV (ApniISP.Com).mp3" data-title="Dubara" data-artist="Pakistani" data-art="assets/images/dubara.jpeg">
+            <span>Dubara</span>
+          </div>
+          <div class="playlist-item" data-src="assets/songs/Mein Ost.mp3" data-title="Mein" data-artist="Pakistani" data-art="assets/images/Mein.jpg">
+            <span>Mein</span>
+          </div>
+          <div class="playlist-item" data-src="assets/songs/67 - Ishq Murshid - OST - HUM TV (ApniISP.Com).mp3" data-title="Ishq Murshid" data-artist="Ahmed Jahanzeb" data-art="assets/images/ishq murshid.jpeg">
+            <span>Ishq Murshid</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="theme-toggle" aria-label="Toggle Theme">🌗</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
