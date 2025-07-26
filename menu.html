@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .menu-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #1e1e2f;
+    }
+    .menu-title {
+      color: #00fff7;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #23234a;
+    }
+    .menu-cards {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .menu-card {
+      background: #23234a;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+      padding: 2.2rem 2.5rem;
+      min-width: 220px;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: 2px solid transparent;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .menu-card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 12px 36px 0 rgba(0,255,247,0.15);
+      border: 2px solid #00fff7;
+    }
+    .menu-card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .menu-card .label {
+      color: #ffffff;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 700px) {
+      .menu-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .menu-card {
+        min-width: 80vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-page">
+    <div class="menu-title">🎵 Choose Your Playlist</div>
+    <div class="menu-cards">
+      <a href="index2.html#bollywood" class="menu-card">
+        <div class="emoji">🎬</div>
+        <div class="label">Bollywood</div>
+      </a>
+      <a href="index2.html#pakistani" class="menu-card">
+        <div class="emoji">🇵🇰</div>
+        <div class="label">Pakistani</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html> 
